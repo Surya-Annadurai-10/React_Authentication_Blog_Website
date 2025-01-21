@@ -9,7 +9,7 @@ const Login = () => {
 
     const ctx = useContext(UserContext)
     const navigate = useNavigate();
-const handleLogin = async() =>{
+    const handleLogin = async() =>{
     try{
      const res = await signInWithPopup(auth,googleAuthProvider);
     //  console.log(res);

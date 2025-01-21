@@ -1,0 +1,26 @@
+.card_con{
+    width: 500px;
+    padding: 1.5rem;
+    background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+    border-radius: 10px;
+    margin: 1rem;
+
+}
+
+.title{
+    text-transform: capitalize;
+    margin: 1rem 0;
+}
+
+.card_con p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.created{
+    background-color: greenyellow;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+   display: inline-block;
+   margin: 1rem 0;
+}

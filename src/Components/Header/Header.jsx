@@ -17,7 +17,7 @@ const Header = () => {
         </ul>
         <div className={styles.profilename_con}>
             <div className={styles.profilename}>
-                <p>{ctx.userDetails.name.split(" ")[0][0]}{ctx.userDetails.name.split(" ")[1][0]}</p>
+                <p>{ctx.userDetails.name && `${ctx.userDetails.name.split(" ")[0].substring(0,1)} ${ctx.userDetails.name.split(" ")[1].substring(0,1)}`}</p>
             </div>
             <Link className={styles.logout} to={"/"}>Log Out</Link>
         </div>

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -12,7 +12,14 @@ import { createContext } from 'react'
 export const UserContext = createContext();
 
 function App() {
-const [userDetails , setUserDetails] = useState({});
+const [userDetails , setUserDetails] = useState({
+  name : "",
+  email : "",
+  uid : ""
+});
+
+ const [blogPosts , setBlogPosts] = useState([]);
+ const [loadBlog , setLoadBlog] = useState(false);
 
 const router = createBrowserRouter ([
   {
@@ -36,7 +43,7 @@ const router = createBrowserRouter ([
 
   return (
    <>
-   <UserContext.Provider value={{userDetails,setUserDetails}}>
+   <UserContext.Provider value={{loadBlog , setLoadBlog,blogPosts , setBlogPosts,userDetails,setUserDetails}}>
       <RouterProvider router = {router} />
    </UserContext.Provider>
    </>
